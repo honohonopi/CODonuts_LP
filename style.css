@@ -1,0 +1,830 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #333333;
+    /* font-family: 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, メイリオ, sans-serif; */
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: bold;
+}
+
+.container{
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+@media (max-width: 768px){
+    .container{
+        padding: 0 15px;
+    }
+}
+
+
+.container_function{
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.heading{
+    font-size: 48px;
+    text-align: center;
+    span{
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 768px){
+    .heading{
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 480px){
+    .heading{
+        font-size: 24px;
+    }
+}
+
+.firstview{
+    width: 100vw;
+    height: 100vh;
+    background-color: #1E283F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 0;
+    align-items: flex-end;
+    position: relative;
+}
+
+.firstview::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+        url("images/donut_chocolate.png"),
+        url("images/donut_chocolate.png"),
+        url("images/donut_chocolate.png"),
+        url("images/donut_chocolate.png");
+    background-repeat: no-repeat;
+    background-size: 400px, 250px, 150px, 350px;
+    background-position: 
+        left -80px top -180px,
+        right -100px top -100px,
+        right -75px bottom 220px,
+        left -120px bottom -160px;
+
+    opacity: 0.75;
+    pointer-events: none;
+    z-index: -1;
+}
+
+
+.first_contents{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 150px;
+    img{
+        width: 400px;
+    }
+}
+
+@media (max-width: 1024px){
+    .first_contents{
+        column-gap: 50px;
+    }
+}
+
+
+@media (max-width: 768px){
+    .first_contents{
+        flex-direction: column;
+        align-items: center;
+        img{
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .first_contents{
+        flex-direction: column;
+        align-items: center;
+        img{
+            max-width: 320px;
+            width: 100%;
+        }
+    }
+}
+
+.first_content{
+    max-width: 416px;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    justify-content: center;
+    align-items: center;
+    a{
+        width: 80%;
+        text-align: center;
+        img{
+            width: 400px;
+        }
+    }
+}
+
+.logo_big{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 20px;
+    img{
+        max-width: 128px;
+        width: 40%;
+        height: auto;
+        border-radius: 15px;
+    }
+    .logo_title{
+        display: flex;
+        flex-direction: column;
+        p{
+            font-size: 19px;
+            font-weight: normal;
+            color: #FFFFFF;
+        }
+        h1{
+            font-size: 64px;
+            font-weight: bold;
+        }
+    }
+}
+
+.appsubtitle span.co {
+    color: #4EF2C6;
+}
+
+.appname span.co {
+    color: #4EF2C6;
+}
+
+.appname span.brace {
+    color: #FFFFFF;
+}
+
+.appname span.donuts {
+    color: #FF7EB8;
+}
+
+@media (max-width: 1024px){
+    .logo_big{
+        column-gap: 20px;
+        
+        .logo_title{
+            p{
+                font-size: 24px;
+                line-height: normal;
+            }
+            h1{
+                font-size: 58px;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 768px){
+    .first_content{
+        width: 100%;
+    }
+
+    .logo_big{
+        column-gap: 20px;
+        
+        .logo_title{
+            p{
+                font-size: 28px;
+                line-height: normal;
+            }
+            h1{
+                font-size: 64px;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .first_content{
+        width: 100%;
+    }
+
+    .logo_big{
+        column-gap: 20px;
+        justify-content: center;
+        img{
+            width: 30%;
+        }
+        .logo_title{
+            p{
+                font-size: 20px;
+                line-height: normal;
+            }
+            h1{
+                font-size: 48px;
+                line-height: normal;
+            }
+        }
+    }
+}
+
+/* =========================================
+   Introduction Section
+========================================= */
+
+.intro_section {
+    position: relative;
+    background-color: #1E283F;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 左側背景画像 */
+.intro_bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.intro_coding {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 左→右へ暗くなるフィルタ */
+.intro_filter {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to right,
+        rgba(30,40,63,0) 0%,
+        rgba(30,40,63,0.5) 50%,
+        rgba(30,40,63,1) 100%
+    );
+}
+
+/* falling donuts を後ろに */
+#fallingDonuts {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* 中央コンテンツ */
+.intro_container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;  /* ← これに変更 */
+    column-gap: 60px;         /* ← 余白は gap で調整 */
+}
+
+/* 左側テキスト */
+.intro_text {
+    max-width: 640px;
+}
+
+.intro_title {
+    font-size: 32px;
+    color: white;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.intro_title .pink {
+    color: #FF7EB8;
+}
+
+.intro_desc {
+    font-size: 20px;
+    color: white;
+}
+
+.intro_desc .co {
+    color: #4EF2C6;
+}
+.intro_desc .brace {
+    color: #FFFFFF;
+}
+.intro_desc .donuts {
+    color: #FF7EB8;
+}
+
+/* 右側スマホ画像 */
+.intro_image img {
+    max-width: 312px;
+    width: auto;
+    height: 80%;
+    display: block;
+}
+
+/* 落下ドーナツの基本設定 */
+.donut {
+    position: absolute;
+    top: -150px;
+    opacity: 0.5; /* ←背景ドーナツ50%透明度 */
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(120vh); }
+}
+
+/* SP レイアウト */
+@media (max-width: 768px) {
+    .intro_container {
+        flex-direction: column;
+        text-align: center;
+        row-gap: 40px;
+    }
+
+    .intro_bg {
+        width: 100%;
+        height: 50%;
+    }
+
+    .intro_title {
+        font-size: 32px;
+    }
+
+    .intro_desc {
+        font-size: 16px;
+    }
+
+    .intro_image img {
+        width: 70%;
+    }
+}
+
+/* ===========================
+      New! Section（修正版）
+=========================== */
+
+.new_section {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  background-color: #1E283F;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* hand_mockup は new_section の右端に固定 */
+.new_mockup {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 90%;
+  z-index: 1;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+/* 濃淡フィルタ（右→左, 上→下） */
+.new_filter {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: 
+    linear-gradient(to right, rgba(30,40,63,0) 0%, rgba(30,40,63,0.6) 60%, rgba(30,40,63,1) 100%),
+    linear-gradient(to bottom, rgba(30,40,63,0) 0%, rgba(30,40,63,1) 100%);
+  pointer-events: none;
+}
+
+/* community.png ＋ テキスト（中央ブロック） */
+.new_inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  column-gap: 80px;
+  max-width: 1180px;
+  width: 100%;
+  padding: 0 40px;
+}
+
+/* 左側 community.png */
+.new_left {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.new_left_img {
+  width: 320px;
+}
+
+/* テキスト部分 */
+.new_texts {
+  color: #fff;
+  max-width: 720px;
+}
+
+.new_badge {
+  display: inline-block;
+  background-color: #FF7EB8;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 999px;
+  padding: 6px 20px;
+  margin-bottom: 28px;
+}
+
+.new_title {
+    color: #FFFFFF;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.new_desc {
+    color: #FFFFFF;
+  font-size: 20px;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .new_section {
+    height: auto;
+    padding: 80px 0;
+  }
+
+  .new_inner {
+    flex-direction: column;
+    row-gap: 40px;
+    text-align: center;
+  }
+
+  .new_mockup {
+    height: 60%;
+    right: -20%;
+    opacity: 0.4;
+  }
+
+  .new_left_img {
+    width: 60%;
+  }
+
+  .new_title {
+    font-size: 28px;
+  }
+}
+
+/* ================================
+   FUNCTION SECTION
+================================ */
+
+.function_section {
+  position: relative;
+  background-color: #1E283F;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+/* 背景ドーナツ（固定配置） */
+.function_bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("images/donut_chocolate.png"),
+    url("images/donut_chocolate.png"),
+    url("images/donut_chocolate.png"),
+    url("images/donut_chocolate.png"),
+    url("images/donut_chocolate.png"),
+    url("images/donut_chocolate.png");
+  background-repeat: no-repeat;
+  background-size: 380px, 220px, 200px, 300px, 200px, 250px;
+  background-position:
+    left -120px top -120px,
+    right -120px top 20px,
+    left 30% bottom -100px,
+    right -140px bottom -120px,
+    left 400px bottom 360px,
+    right 360px bottom 90px;
+  opacity: 0.7;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* コンテンツ配置 */
+.function_container {
+  position: relative;
+  z-index: 1;
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 0 40px;
+}
+
+/* 個々の機能アイテム */
+.function_item {
+  width: 30%;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.function_item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 真ん中アイテムだけ少し上下調整 */
+.center_item {
+  transform: translateY(-160px);
+}
+
+.center_item.show {
+  transform: translateY(-80px);
+}
+
+/* 画像 */
+.function_img {
+  width: 100%;
+  max-width: 360px;
+  margin-bottom: 20px;
+}
+
+/* テキスト */
+.function_text {
+  font-size: 22px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.function_text .pink {
+  color: #FF7EB8;
+}
+
+.center_text {
+  margin-top: 12px;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .function_container {
+    flex-direction: column;
+    row-gap: 80px;
+    padding: 0 20px;
+  }
+
+  .function_item {
+    width: 100%;
+  }
+
+  .function_img {
+    max-width: 70%;
+  }
+
+  .function_text {
+    font-size: 20px;
+  }
+}
+
+/* ============================
+   DOWNLOAD SECTION
+============================ */
+
+.download_section {
+  position: relative;
+  background-color: #1E283F;
+  padding: 200px 0;
+  overflow: hidden;
+  align-items: center;
+}
+
+.download_title {
+  position: relative;
+  z-index: 5;
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  opacity: 0.9;
+  margin-bottom: 80px; /* inner との間に縦余白 */
+  letter-spacing: 1px;
+}
+
+.download_title .green {
+  color: #4EF2C6;
+}
+
+.download_title .pink {
+  color: #FF7EB8;
+}
+
+/* 背景ドーナツ（firstview/function と同様） */
+.download_bg {
+  position: absolute;
+  inset: 0;
+  background-image:
+    url("images/donut_strawberry.png"),
+    url("images/donut_chocolate.png"),
+    url("images/donut_strawberry_light.png"),
+    url("images/donut_strawberry.png"),
+    url("images/donut_chocolate.png");
+  background-repeat: no-repeat;
+  background-size: 200px, 200px, 200px, 200px, 200px;
+  background-position:
+    left 0px bottom 200px,
+    left 30px bottom 0px,
+    left 230px bottom 0px,
+    right 80px bottom 0px,
+    right 0px bottom 180px;
+  opacity: 1.0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* 中央ロゴ & ボタン */
+.download_inner {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.download_logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.download_logo img {
+  width: 110px;
+  border-radius: 20px;
+}
+
+.dl_title {
+  font-size: 48px;
+  color: white;
+}
+
+.dl_store_btn img {
+  width: 400px;
+}
+
+/* SP */
+@media (max-width: 768px) {
+  .download_section {
+    padding: 140px 0;
+  }
+
+  .download_title {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+
+  .dl_title {
+    font-size: 32px;
+  }
+
+  .download_logo img {
+    width: 80px;
+  }
+
+  .dl_store_btn img {
+    width: 220px;
+  }
+}
+
+footer{
+    background-color: #FFF6EA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_contents{
+    display: flex;
+    flex-direction: row;
+    column-gap: 100px;
+    padding: 30px 30px;
+    align-items: center;
+    img{
+        width: 30px;
+        height: 30px;
+    }
+    p{
+        width: 300px;
+        text-align: center;
+        font-weight: bold;
+        color: #1E283F;
+    }
+}
+
+@media (max-width: 1024px){
+    .footer_contents{
+        column-gap: 50px;
+        p{
+            font-size: 16px;
+            max-width: 240px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .footer_contents{
+        column-gap: 30px;
+        p{
+            width: fit-content;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .footer_contents{
+        padding: 30px 15px;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 20px;
+        p{
+            align-items: center;
+            max-width: 240px;
+            width: 100%;
+        }
+    }
+}
+
+.policies{
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    align-items: center;
+    a{
+        font-size: 16px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #1E283F;
+    }
+}
+
+@media (max-width: 1024px){
+    .policies{
+        column-gap: 30px;
+        justify-content: right;
+        a{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .policies{
+        /* flex-direction: column;
+        align-items: center; */
+        a{
+            font-size: 14px;
+        }
+    }
+}
+
+@media (max-width: 480px){
+    .policies{
+        align-items: center;
+        justify-content: center;
+        a{
+            font-size: 14px;
+        }
+    }
+}

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tripom</title>
+  <meta property="og:title" content="Tripom">
+  <meta property="og:images" content="https://tripom-app.com/images/ogp.png">
+  <meta property="og:description" content="">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="swiper.min.css" />
+  <script src="swiper.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+  <!-- <script src="script.js"></script> -->
+</head>
+
+<body>
+  <header class="firstview">
+    <div class="container">
+      <div class="first_contents">
+        <div class="first_content">
+          <div class="logo_big">
+            <img src="images/icon.png" alt="">
+            <div class="logo_title">
+              <h1 class="appname">
+                <span class="co">CO</span><span class="brace">{</span><span class="donuts">Donuts</span><span
+                  class="brace">}</span>
+              </h1>
+              <p class="appsubtitle"><span class="co">CO</span>DE & <span class="co">CO</span>MMIT with <span
+                  class="co">CO</span>LLABORATORS.</p>
+            </div>
+          </div>
+          <a href="https://testflight.apple.com/join/qB6q9yqe"><img src="images/appstore.png" alt=""></a>
+        </div>
+        <img src="images/app_home.png" alt="">
+      </div>
+    </div>
+  </header>
+  <section id="introduction" class="intro_section">
+    <div class="intro_bg">
+      <img src="images/coding.png" class="intro_coding" alt="">
+      <div class="intro_filter"></div>
+    </div>
+    <div id="fallingDonuts"></div>
+    <div class="intro_container">
+      <div class="intro_text">
+        <h2 class="intro_title">
+          がんばりを「<span class="pink">ドーナツ</span>」で見える化。
+        </h2>
+        <p class="intro_desc appname">
+          <span class="co">CO</span><span class="brace">{</span><span class="donuts">Donuts</span><span
+            class="brace">}</span>は、<br>
+          チーム全員の開発時間をドーナツで可視化するアプリ。
+        </p>
+      </div>
+      <div class="intro_image">
+        <img src="images/homeview.png" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="new_section">
+    <img src="images/hand_mockup.png" class="new_mockup" alt="mockup">
+    <div class="new_filter"></div>
+    <div class="new_inner">
+      <div class="new_left">
+        <img src="images/community.png" alt="community" class="new_left_img">
+      </div>
+
+      <div class="new_texts">
+        <p class="new_badge">New!</p>
+        <h2 class="new_title">
+          コミュニティごとに、がんばりをシェアしよう。
+        </h2>
+        <p class="new_desc">
+          チームを切り替えて、複数コミュニティでの共有が可能に。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="function_section">
+    <div class="function_bg"></div>
+    <div class="function_container">
+      <div class="function_item fade-up">
+        <img src="images/function_1.png" class="function_img">
+        <p class="function_text">
+          日々の開発ログを記録して、<br>
+          <span class="pink">振り返りも楽しく。</span>
+        </p>
+      </div>
+      <div class="function_item fade-down center_item">
+        <img src="images/function_2.png" class="function_img">
+        <p class="function_text center_text">
+          今日のがんばりと積み重ねを、<br>一目で。
+        </p>
+      </div>
+      <div class="function_item fade-up">
+        <img src="images/function_3.png" class="function_img">
+        <p class="function_text">
+          <span class="pink">通知</span>で「今日の開発」を<br>
+          やさしくリマインド。
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="download_section">
+    <p class="download_title">
+      <span class="pink">LET’S</span> <span class="green">CO</span>DE & <span class="green">CO</span>MMIT with <span class="pink">YOUR</span> <span class="green">CO</span>LLABORATORS.
+    </p>
+    <div class="download_bg"></div>
+    <div class="download_inner">
+      <div class="download_logo">
+        <img src="images/icon.png" alt="">
+        <h2 class="appname dl_title">
+          <span class="co">CO</span><span class="brace">{</span><span class="donuts">Donuts</span><span
+            class="brace">}</span>
+        </h2>
+      </div>
+      <a href="https://testflight.apple.com/join/qB6q9yqe" class="dl_store_btn">
+        <img src="images/appstore.png" alt="">
+      </a>
+    </div>
+  </section>
+  <footer>
+    <div class="footer_contents">
+      <div class="policies">
+        <a href="">プライバシーポリシー</a>
+        <a href="">利用規約</a>
+      </div>
+      <img src="images/donut_strawberry.png" alt="">
+      <p>&copy; 2025 Honoka Nishiyama.</p>
+    </div>
+  </footer>
+</body>
+<script src="script.js"></script>
+
+</html>
